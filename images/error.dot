@@ -1,0 +1,24 @@
+digraph error {
+    rankdir=LR
+    node [shape=circle]
+
+    a [shape=point]
+    -6 [shape=doublecircle]
+    98 [shape=doublecircle]
+    
+    a -> 99
+    99 -> 99 [label=others]
+    99 -> -6 [label=termial_char]
+
+    b [shape=point]
+    b -> 97
+    97 -> 97 [label=others]
+    97 -> 98 [label="\""]
+    97 -> -6 [label="newline"]
+
+    c [shape=point]
+    c -> 96
+    96 -> 96 [label=others]
+    96 -> 98 [label="'"]
+    96 -> -6 [label="newline"]
+}

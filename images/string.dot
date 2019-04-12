@@ -1,0 +1,13 @@
+digraph string {
+    rankdir=LR
+    node [shape=circle]
+    s [shape=point]
+    s -> 0
+
+    0 -> 21 [label="\""]
+    21 -> 21 [label=others]
+    21 -> 22 [label="\\"]
+    22 -> 21 [label=esc]
+    21 -> 23 [label="\""]
+    23 [shape=doublecircle]
+}

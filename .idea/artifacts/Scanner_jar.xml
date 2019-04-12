@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Scanner:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Scanner_jar</output-path>
+    <root id="archive" name="Scanner.jar">
+      <element id="module-output" name="Scanner" />
+      <element id="library" level="project" name="lib" />
+    </root>
+  </artifact>
+</component>

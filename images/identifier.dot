@@ -1,0 +1,10 @@
+digraph identifier {
+    rankdir=LR
+    node [shape=circle]
+
+    s [shape=point]
+    s -> 0
+    0 -> 1 [label="letter,_"]
+    1 -> 1 [label="letter,digit,_"]
+    1 [shape=doublecircle]   
+}

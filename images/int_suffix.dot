@@ -1,0 +1,21 @@
+digraph int_suffix {
+    rankdir=LR
+    node [shape=doublecircle]
+    s [shape=point]
+    s -> x
+
+    x -> 47 [label="u,U"]
+    x -> 48 [label=l]
+    x -> 49 [label=L]
+
+    47 -> 50 [label=l]
+    47 -> 51 [label=L]
+    48 -> 52 [label=l]
+    48 -> 53 [label="u,U"]
+    49 -> 52 [label=L]
+    49 -> 53 [label="u,U"]
+
+    50 -> 53 [label=l]
+    51 -> 53 [label=L]
+    52 -> 53 [label="u,U"]
+}

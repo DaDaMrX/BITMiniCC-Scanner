@@ -1,0 +1,58 @@
+digraph operater {
+    rankdir=LR
+    node [shape=circle]
+    s [shape=point]
+    s -> 0
+
+    // delimiter
+    0 -> 24 [label="(,),[,],{,},;"]
+    24 [shape=doublecircle]
+
+    // operater
+    0 -> 26 [label="?,:,~,"]
+    26 [shape=doublecircle]
+
+    0 -> 25 [label="-"]
+    25 -> 24 [label=">"]
+    25 -> b [label="-,="]
+    25 [shape=doublecircle]
+    b [label=26, shape=doublecircle]
+
+    0 -> 27 [label="+"]
+    27 -> a [label="+,="]
+    27 [shape=doublecircle]
+    a [label=26, shape=doublecircle]
+    
+    0 -> 28 [label="\&"]
+    28 -> c [label="\&,="]
+    28 [shape=doublecircle]
+    c [label=26, shape=doublecircle]
+    
+    0 -> 29 [label="|"]
+    29 -> d [label="|,="]
+    29 [shape=doublecircle]
+    d [label=26, shape=doublecircle]
+
+    0 -> 30 [label="<"]
+    30 -> e [label="="]
+    30 -> 33 [label="<"]
+    33 -> i [label="="]
+    e [label=26, shape=doublecircle]
+    33 [shape=doublecircle]
+    30 [shape=doublecircle]
+    i [label=26, shape=doublecircle]
+    
+    0 -> 31 [label=">"]
+    31 -> f [label="="]
+    f [label=26, shape=doublecircle]
+    31 -> g [label=">"]
+    h [label=26, shape=doublecircle]
+    g [label=33, shape=doublecircle]
+    g -> h [label="="]
+    31 [shape=doublecircle]
+
+    0 -> 32 [label="*,/,%,!,^,="]
+    32 -> j [label="="]
+    32 [shape=doublecircle]
+    j [label=26, shape=doublecircle]
+}

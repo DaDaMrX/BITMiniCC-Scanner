@@ -1,0 +1,28 @@
+digraph char2 {
+    rankdir=LR
+    node [shape=circle]
+    s [shape=point]
+    s -> 0
+
+    0 -> 17 [label="'"]
+    17 -> 19 [label=others]
+    17 -> 18 [label="\\"]
+    18 -> 19 [label=esc]
+    19 -> 20 [label="'"]
+    20 [shape=doublecircle]
+
+    0 -> 35 [label="L,u,U"]
+    35 -> 17 [label="'"]
+
+    18 -> 36 [label=octal_digit]
+    36 -> 37 [label=octal_digit]
+    37 -> 38 [label=octal_digit]
+    36 -> 20 [label="'"]
+    37 -> 20 [label="'"]
+    38 -> 20 [label="'"]
+
+    18 -> 39 [label="x"]
+    39 -> 40 [label=hex_digit]
+    40 -> 40 [label=hex_digit]
+    40 -> 20 [label="'"]
+}

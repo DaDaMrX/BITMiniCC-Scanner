@@ -1,0 +1,22 @@
+digraph integr {
+    rankdir=LR
+    node [shape=circle]
+    s [shape=point]
+    s -> 0
+
+    // decimal integer
+    0 -> 2 [label="1-9"]
+    2 -> 2 [label=digit]
+    2 [shape=doublecircle]
+
+    // octal integer
+    0 -> 3 [label=0]
+    3 -> 3 [label=octal_digit]
+    3 [shape=doublecircle]
+
+    // hexadicimal integer
+    3 -> 12 [label="x,X"]
+    12 -> 13 [label=hex_digit]
+    13 -> 13 [label=hex_digit]
+    13 [shape=doublecircle]
+}

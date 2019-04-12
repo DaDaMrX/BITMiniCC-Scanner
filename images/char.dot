@@ -1,0 +1,13 @@
+digraph char {
+    rankdir=LR
+    node [shape=circle]
+    s [shape=point]
+    s -> 0
+
+    0 -> 17 [label="'"]
+    17 -> 19 [label=others]
+    17 -> 18 [label="\\"]
+    18 -> 19 [label=esc]
+    19 -> 20 [label="'"]
+    20 [shape=doublecircle]
+}

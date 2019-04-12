@@ -1,0 +1,30 @@
+digraph hex_float {
+    rankdir=LR
+    node [shape=circle]
+    s [shape=point]
+    s -> 0
+
+    // octal integer
+    0 -> 3 [label=0]
+    3 -> 3 [label=octal_digit]
+    3 [shape=doublecircle]
+
+    // hexadicimal integer
+    3 -> 4 [label="x,X"]
+    4 -> 5 [label=hex_digit]
+    5 -> 5 [label=hex_digit]
+    5 [shape=doublecircle]
+
+    // hexadicimal float
+    4 -> 12 [label="dot(.)"]
+    12 -> 13 [label=hex_digit]
+    5 -> 13 [label="dot(.)"]
+    13 -> 13 [label=hex_digit]
+    5 -> 14 [label="p,P"]
+    13 -> 14 [label="p,P"]
+    14 -> 16 [label=digit]
+    14 -> 15 [label="+,-"]
+    15 -> 16 [label=digit]
+    16 -> 16 [label=digit]
+    16 [shape=doublecircle]
+}

@@ -1,0 +1,15 @@
+digraph flow {
+    rankdir=LR
+    node [shape=box, fontname="Microsoft YaHei"]
+
+    a [label="词法"]
+    b [label="正规式"]
+    c [label="分DFA"]
+    d [label="总DFA"]
+    e [label="程序"]
+
+    a -> b
+    b -> c
+    c -> d
+    d -> e
+}
